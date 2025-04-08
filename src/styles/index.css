@@ -1,0 +1,44 @@
+/* This file will contain all styles from your original HTML's <style> tag */
+/* We'll implement this first to ensure components look identical */
+
+:root {
+    --primary: #ff386f;
+    --secondary: #6611cb;
+    --accent: #00e5ff;
+    --win: #3aff8a;
+    --dark: #0a0a0f;
+    --darker: #050507;
+    --light: #f8f9fa;
+    --card-bg: rgba(15, 15, 20, 0.8);
+    --gradient: linear-gradient(135deg, var(--secondary), var(--primary));
+    --neon-glow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(102, 17, 203, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 56, 111, 0.15), transparent 40%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Rest of your CSS here */
