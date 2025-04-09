@@ -1,0 +1,105 @@
+/* Winners Section Styles */
+.winners {
+    padding: 6rem 0;
+    background: linear-gradient(0deg, rgba(10, 10, 15, 0.9), var(--darker));
+}
+
+.winners-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.winner-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.winner-info {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.winner-avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.winner-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.winner-id {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.winner-bet {
+    padding: 1.5rem;
+}
+
+.winner-match {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.winner-pick {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.pick-details {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+}
+
+.pick-odds {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.profit-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.3rem;
+}
+
+.profit-value {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--win);
+}
+
+@media (max-width: 768px) {
+    .winners-track {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .winner-card {
+        max-width: 100%;
+    }
+}

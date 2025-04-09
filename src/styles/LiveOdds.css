@@ -1,0 +1,133 @@
+/* Live Odds Section Styles */
+.live-odds {
+    padding: 6rem 0;
+    background: linear-gradient(0deg, var(--darker), rgba(10, 10, 15, 0.9));
+}
+
+.odds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.odds-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.odds-header {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sport-type {
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+}
+
+.match-teams {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.match-time {
+    background: var(--secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.odds-body {
+    padding: 1rem;
+}
+
+.odds-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 500;
+}
+
+.team-logo {
+    width: 32px;
+    height: 32px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.odds-value {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.prediction-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.prediction-fill {
+    height: 100%;
+    width: 86%;
+    background: var(--gradient);
+}
+
+.ainsley-pick {
+    font-weight: 600;
+    color: var(--win);
+    margin-bottom: 1.5rem;
+}
+
+.odds-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.simulate-btn {
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--accent);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    border: 1px solid var(--accent);
+}
+
+.simulate-btn:hover {
+    background: rgba(0, 229, 255, 0.2);
+}
+
+.confidence {
+    font-weight: 600;
+    color: var(--win);
+}
+
+@media (max-width: 768px) {
+    .odds-grid {
+        justify-content: center;
+    }
+}

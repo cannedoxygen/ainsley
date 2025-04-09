@@ -11,9 +11,18 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 function Hero() {
+  // Use placeholder images until real ones are available
+  const images = {
+    baseball: "https://placehold.co/250x350?text=Baseball",
+    soccer: "https://placehold.co/250x350?text=Soccer",
+    boxing: "https://placehold.co/250x350?text=Boxing",
+    golf: "https://placehold.co/250x350?text=Golf",
+    football: "https://placehold.co/250x350?text=Football",
+  };
+
   return (
     <section className="hero">
-      <div className="container" style={{display: 'flex', alignItems: 'center'}}>
+      <div className="container">
         <div className="hero-content">
           <div className="hero-slogan">Powered by AI, Inspired by Beauty</div>
           <h1>UNLOCK <span>HOT PICKS</span> & WINNING PREDICTIONS</h1>
@@ -33,7 +42,7 @@ function Hero() {
             <div className="marquee-track">
               {/* First set of images */}
               <div className="marquee-item">
-                <img src="/assets/images/baseball-ainsley.jpg" alt="Baseball Ainsley" />
+                <img src={images.baseball} alt="Baseball Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faBaseballBall} /> Baseball
@@ -46,7 +55,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/soccer-ainsley.jpg" alt="Soccer Ainsley" />
+                <img src={images.soccer} alt="Soccer Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faFutbol} /> Soccer
@@ -59,7 +68,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/boxing-ainsley.jpg" alt="Boxing Ainsley" />
+                <img src={images.boxing} alt="Boxing Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faFistRaised} /> Boxing
@@ -72,7 +81,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/golf-ainsley.jpg" alt="Golf Ainsley" />
+                <img src={images.golf} alt="Golf Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faGolfBall} /> Golf
@@ -85,7 +94,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/football-ainsley.jpg" alt="Football Ainsley" />
+                <img src={images.football} alt="Football Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faFootballBall} /> Football
@@ -100,7 +109,7 @@ function Hero() {
               
               {/* Duplicated for continuous scrolling - identical set repeated */}
               <div className="marquee-item">
-                <img src="/assets/images/baseball-ainsley.jpg" alt="Baseball Ainsley" />
+                <img src={images.baseball} alt="Baseball Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faBaseballBall} /> Baseball
@@ -113,7 +122,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/soccer-ainsley.jpg" alt="Soccer Ainsley" />
+                <img src={images.soccer} alt="Soccer Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faFutbol} /> Soccer
@@ -126,7 +135,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/boxing-ainsley.jpg" alt="Boxing Ainsley" />
+                <img src={images.boxing} alt="Boxing Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faFistRaised} /> Boxing
@@ -139,7 +148,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/golf-ainsley.jpg" alt="Golf Ainsley" />
+                <img src={images.golf} alt="Golf Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faGolfBall} /> Golf
@@ -152,7 +161,7 @@ function Hero() {
                 </div>
               </div>
               <div className="marquee-item">
-                <img src="/assets/images/football-ainsley.jpg" alt="Football Ainsley" />
+                <img src={images.football} alt="Football Ainsley" />
                 <div className="marquee-caption">
                   <div className="marquee-sport">
                     <FontAwesomeIcon icon={faFootballBall} /> Football

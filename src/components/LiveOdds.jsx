@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faFootballBall, 
@@ -6,10 +6,35 @@ import {
   faFutbol, 
   faCheckCircle, 
   faChartLine, 
-  faBolt 
+  faBolt,
+  faSpinner
 } from '@fortawesome/free-solid-svg-icons';
 
 function LiveOdds() {
+  // State to track if a simulation is running
+  const [simulations, setSimulations] = useState({
+    nfl: false,
+    nba: false,
+    soccer: false
+  });
+
+  // Function to handle simulation button clicks
+  const runSimulation = (game) => {
+    // Set the specific game simulation to running
+    setSimulations({
+      ...simulations,
+      [game]: true
+    });
+    
+    // After a delay, turn off the simulation
+    setTimeout(() => {
+      setSimulations(prev => ({
+        ...prev,
+        [game]: false
+      }));
+    }, 2000);
+  };
+
   return (
     <section className="live-odds">
       <div className="container">
@@ -45,15 +70,23 @@ function LiveOdds() {
                 <div className="odds-value">+7.5</div>
               </div>
               <div className="prediction-bar">
-                <div className="prediction-fill"></div>
+                <div className="prediction-fill" style={{width: '86%'}}></div>
               </div>
               <div className="ainsley-pick">
                 <FontAwesomeIcon icon={faCheckCircle} /> Ainsley's Pick: Chiefs -7.5
               </div>
             </div>
             <div className="odds-footer">
-              <button className="simulate-btn">
-                <FontAwesomeIcon icon={faChartLine} /> Run Simulation
+              <button 
+                className="simulate-btn"
+                onClick={() => runSimulation('nfl')}
+                disabled={simulations.nfl}
+              >
+                {simulations.nfl ? (
+                  <><FontAwesomeIcon icon={faSpinner} spin /> Simulating...</>
+                ) : (
+                  <><FontAwesomeIcon icon={faChartLine} /> Run Simulation</>
+                )}
               </button>
               <div className="confidence">
                 <FontAwesomeIcon icon={faBolt} /> 86% Confidence
@@ -94,8 +127,16 @@ function LiveOdds() {
               </div>
             </div>
             <div className="odds-footer">
-              <button className="simulate-btn">
-                <FontAwesomeIcon icon={faChartLine} /> Run Simulation
+              <button 
+                className="simulate-btn"
+                onClick={() => runSimulation('nba')}
+                disabled={simulations.nba}
+              >
+                {simulations.nba ? (
+                  <><FontAwesomeIcon icon={faSpinner} spin /> Simulating...</>
+                ) : (
+                  <><FontAwesomeIcon icon={faChartLine} /> Run Simulation</>
+                )}
               </button>
               <div className="confidence">
                 <FontAwesomeIcon icon={faBolt} /> 72% Confidence
@@ -143,8 +184,16 @@ function LiveOdds() {
               </div>
             </div>
             <div className="odds-footer">
-              <button className="simulate-btn">
-                <FontAwesomeIcon icon={faChartLine} /> Run Simulation
+              <button 
+                className="simulate-btn"
+                onClick={() => runSimulation('soccer')}
+                disabled={simulations.soccer}
+              >
+                {simulations.soccer ? (
+                  <><FontAwesomeIcon icon={faSpinner} spin /> Simulating...</>
+                ) : (
+                  <><FontAwesomeIcon icon={faChartLine} /> Run Simulation</>
+                )}
               </button>
               <div className="confidence">
                 <FontAwesomeIcon icon={faBolt} /> 58% Confidence
